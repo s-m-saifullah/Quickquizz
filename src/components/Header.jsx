@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <div className="navbar bg-slate-600 py-5">
+      <div className="navbar bg-slate-600 py-5 md:px-24">
         <div className="navbar-start">
           <Link
             to="/"

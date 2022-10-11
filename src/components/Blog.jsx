@@ -10,24 +10,36 @@ const Blog = () => {
         <table className="table w-full">
           <thead>
             <tr>
-              <th className="w-5"></th>
-              <th className="text-center text-base md:text-xl">
+              <th className="bg-slate-500 w-5"></th>
+              <th className="bg-slate-500 text-center text-base md:text-xl">
                 Question and Answer
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>1</th>
-              <td>Blue</td>
+              <th className="bg-slate-900">1</th>
+              <td className="bg-slate-900">
+                <strong>Question: What is the purpose of react router?</strong>
+                <br />
+                <strong>Answer: </strong>
+              </td>
             </tr>
             <tr>
-              <th>2</th>
-              <td>Purple</td>
+              <th className="bg-slate-800">2</th>
+              <td className="bg-slate-800">
+                <strong>Question: How does context api work?</strong>
+                <br />
+                <strong>Answer: </strong>
+              </td>
             </tr>
             <tr>
-              <th>3</th>
-              <td>Red</td>
+              <th className="bg-slate-900">3</th>
+              <td className="bg-slate-900">
+                <strong>Question: What is useRef hook?</strong>
+                <br />
+                <strong>Answer: </strong>
+              </td>
             </tr>
           </tbody>
         </table>
