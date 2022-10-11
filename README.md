@@ -1,6 +1,6 @@
 # Project Name
 
-### quickquiz
+### quickquizz
 
 <br/>
 
