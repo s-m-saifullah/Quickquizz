@@ -10,7 +10,9 @@ const Quizzes = () => {
 
   return (
     <div className="w-11/12 mx-auto text-center">
-      <h2 className="text-2xl font-bold mb-6">{name} Quizzes</h2>
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold my-10">
+        {name} Quizzes
+      </h2>
       <div className="grid md:grid-cols-4">
         <QuizResult marks={marks} />
         <div className="md:col-span-3">

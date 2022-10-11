@@ -36,7 +36,9 @@ const QuizOptions = ({
             className="radio checked:bg-blue-500"
             ref={detailsRef}
           />
-          <span className="group-hover:text-white label-text">{option}</span>
+          <span className="group-hover:text-white label-text md:text-base">
+            {option}
+          </span>
         </label>
       </div>
       <ToastContainer />

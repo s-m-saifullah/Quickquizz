@@ -8,7 +8,7 @@ const QuizQuestion = ({ singleQuestion, serialNumber, marks, setMarks }) => {
   const { question, options, correctAnswer } = singleQuestion;
   return (
     <div className="md:w-3/4 mx-auto mb-10 p-3 border-2 rounded-lg">
-      <h3 className="font-ubuntuCode text-xl mb-3">
+      <h3 className="font-ubuntuCode text-xl md:text-2xl mb-3">
         <span>Quiz {serialNumber + 1}: </span>
         {question}{" "}
         <button
@@ -21,7 +21,7 @@ const QuizQuestion = ({ singleQuestion, serialNumber, marks, setMarks }) => {
           />
         </button>
       </h3>
-      <ul className="grid md:grid-cols-2 gap-2">
+      <ul className="grid md:grid-cols-2 text-start gap-2">
         {options.map((option, index) => (
           <QuizOptions
             key={index}

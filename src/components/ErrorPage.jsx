@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
-    <div>
+    <div className="w-11/12 md:w-10/12 mx-auto">
       <div className="bg-base-100 h-screen justify-center">
         <center className="mt-24 m-auto">
           <svg

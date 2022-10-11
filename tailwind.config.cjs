@@ -26,12 +26,7 @@ module.exports = {
       "dracula",
       "cmyk",
       "autumn",
-      "business",
-      "acid",
-      "lemonade",
-      "night",
       "coffee",
-      "winter",
     ],
   },
   theme: {
