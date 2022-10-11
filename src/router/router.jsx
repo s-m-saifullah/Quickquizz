@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Blog from "../components/Blog";
+import ErrorPage from "../components/ErrorPage";
 import Home from "../components/Home";
 import Quizzes from "../components/Quizzes";
 import Statistics from "../components/Statistics";
@@ -39,5 +40,6 @@ export const router = createBrowserRouter([
         element: <Blog />,
       },
     ],
+    errorElement: <ErrorPage />,
   },
 ]);
