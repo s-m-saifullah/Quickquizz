@@ -8,7 +8,7 @@ const QuizQuestion = ({ singleQuestion, serialNumber, marks, setMarks }) => {
   const { question, options, correctAnswer } = singleQuestion;
   return (
     <div className="md:w-3/4 mx-auto mb-10 p-3 border-2 rounded-lg">
-      <h3 className="font-ubuntuCode text-xl md:text-2xl mb-3">
+      <h3 className="font-ubuntuCode text-left text-xl md:text-2xl pr-9 md:pr-12 mb-3 relative">
         <span>Quiz {serialNumber + 1}: </span>
         {question}{" "}
         <button
@@ -16,7 +16,7 @@ const QuizQuestion = ({ singleQuestion, serialNumber, marks, setMarks }) => {
           className="cursor-pointer"
         >
           <FontAwesomeIcon
-            className="hover:text-green-500 transition-all duration-300"
+            className="absolute right-1 top-1 hover:text-primary transition-all duration-300"
             icon={faEye}
           />
         </button>
@@ -33,7 +33,12 @@ const QuizQuestion = ({ singleQuestion, serialNumber, marks, setMarks }) => {
           />
         ))}
       </ul>
-      {isEyeOpen && <p>Correct Answer: {correctAnswer}</p>}
+      {isEyeOpen && (
+        <p className="bg-success text-primary font-bold px-2 py-3 rounded-lg">
+          Correct Answer:{" "}
+          <span className="text-secondary">{correctAnswer}</span>
+        </p>
+      )}
     </div>
   );
 };

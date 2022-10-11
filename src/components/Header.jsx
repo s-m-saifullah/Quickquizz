@@ -4,26 +4,26 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <div className="navbar bg-slate-600 py-5 md:px-24">
+      <div className="navbar bg-base-300 py-5 md:px-24">
         <div className="navbar-start">
           <Link
             to="/"
             className="btn btn-ghost normal-case text-3xl font-baloo"
           >
             <img className="w-10" src="/favicon.png" alt="" />
-            quickquiz
+            quickquizz
           </Link>
         </div>
         <div className="navbar-end">
           <div className=" hidden md:flex">
             <ul className="menu menu-horizontal p-0 uppercase">
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/home">Home</NavLink>
               </li>
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/statistics">Statistics</NavLink>
               </li>
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/blog">Blog</NavLink>
               </li>
             </ul>

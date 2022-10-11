@@ -26,7 +26,7 @@ const QuizOptions = ({
   return (
     <div
       onChange={() => handledOptionClick(option)}
-      className="p-3 group hover:bg-slate-400 transition-colors duration-500 rounded-lg"
+      className="p-3 group hover:bg-base-300 transition-colors duration-500 rounded-lg"
     >
       <div className="form-control">
         <label className="label cursor-pointer justify-start gap-3">
@@ -36,7 +36,7 @@ const QuizOptions = ({
             className="radio checked:bg-blue-500"
             ref={detailsRef}
           />
-          <span className="group-hover:text-white label-text md:text-base">
+          <span className="group-hover:text-primary label-text md:text-base">
             {option}
           </span>
         </label>

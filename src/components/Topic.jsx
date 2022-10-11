@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Topic = ({ topic }) => {
   const { id, logo, name, total } = topic;
   return (
-    <div className="card card-compact w-full bg-slate-500 shadow-xl">
-      <figure className="bg-slate-900">
+    <div id="topics" className="card card-compact w-full bg-base-300 shadow-xl">
+      <figure className="bg-base-200">
         <img src={logo} alt={`${name}-logo`} />
       </figure>
       <div className="card-body">

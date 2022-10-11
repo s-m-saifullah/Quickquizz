@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div className="w-11/12 md:w-10/12 mx-auto">
+    <div className="w-11/12 md:w-10/12 mx-auto mb-10">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center my-10">
         Blog
       </h2>
@@ -10,16 +10,16 @@ const Blog = () => {
         <table className="table w-full">
           <thead>
             <tr>
-              <th className="bg-slate-500 w-5 whitespace-normal"></th>
-              <th className="bg-slate-500 text-center text-base md:text-xl whitespace-normal">
+              <th className="bg-base-300 w-5 whitespace-normal"></th>
+              <th className="bg-base-300 text-center text-base md:text-xl whitespace-normal">
                 Question and Answer
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th className="bg-slate-900 align-top whitespace-normal">1</th>
-              <td className="bg-slate-900 whitespace-normal">
+              <th className="bg-base-200 align-top whitespace-normal">1</th>
+              <td className="bg-base-200 whitespace-normal">
                 <p className="mb-3">
                   <strong>
                     Question: What is the purpose of react router?
@@ -50,8 +50,8 @@ const Blog = () => {
               </td>
             </tr>
             <tr>
-              <th className="bg-slate-800 align-top whitespace-normal">2</th>
-              <td className="bg-slate-800 whitespace-normal">
+              <th className="bg-base-300 align-top whitespace-normal">2</th>
+              <td className="bg-base-300 whitespace-normal">
                 <p className="mb-3">
                   <strong>Question: How does context api work?</strong>
                 </p>
@@ -72,8 +72,8 @@ const Blog = () => {
               </td>
             </tr>
             <tr>
-              <th className="bg-slate-900 align-top whitespace-normal">3</th>
-              <td className="bg-slate-900 whitespace-normal">
+              <th className="bg-base-200 align-top whitespace-normal">3</th>
+              <td className="bg-base-200 whitespace-normal">
                 <p className="mb-3">
                   <strong>Question: What is useRef hook?</strong>
                 </p>
