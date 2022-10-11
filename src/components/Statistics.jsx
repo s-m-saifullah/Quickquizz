@@ -40,7 +40,7 @@ const Statistics = () => {
     return null;
   };
   return (
-    <div className="w-11/12 md:w-10/12 mx-auto text-center">
+    <div className="w-11/12 md:w-10/12 mx-auto mb-10 text-center">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold my-10">
         Pie Chart of Topic Questions
       </h2>
