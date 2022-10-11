@@ -45,7 +45,7 @@ const Statistics = () => {
         Pie Chart of Topic Questions
       </h2>
       <div className="flex justify-center">
-        <PieChart width={790} height={380}>
+        <PieChart width={790} height={400}>
           <Pie
             data={pieData}
             color="#000000"
