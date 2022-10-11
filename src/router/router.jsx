@@ -31,6 +31,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/statistics",
+        loader: topicLoader,
         element: <Statistics />,
       },
       {
