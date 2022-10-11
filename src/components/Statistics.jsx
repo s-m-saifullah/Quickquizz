@@ -1,59 +1,60 @@
-import React, { PureComponent } from "react";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
+import React from "react";
+import { useLoaderData } from "react-router-dom";
+import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
-const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 },
-];
+const Statistics = () => {
+  const data = useLoaderData();
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({
-  cx,
-  cy,
-  midAngle,
-  innerRadius,
-  outerRadius,
-  percent,
-  index,
-}) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  return (
-    <text
-      x={x}
-      y={y}
-      fill="white"
-      textAnchor={x > cx ? "start" : "end"}
-      dominantBaseline="central"
-    >
-      {`${(percent * 100).toFixed(0)}%`}
-    </text>
+  const totalQuestion = data.reduce(
+    (prevData, newObj) => prevData + newObj.total,
+    0
   );
-};
 
-export default class Statistics extends PureComponent {
-  static demoUrl =
-    "https://codesandbox.io/s/pie-chart-with-customized-label-dlhhj";
+  const pieData = data.map((item) => {
+    const name = item.name;
+    const total = item.total;
+    const totalPercent = parseFloat(((total * 100) / totalQuestion).toFixed(2));
+    const newObj = {
+      name: name,
+      value: totalPercent,
+    };
+    return newObj;
+  });
 
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="100%">
-        <PieChart width={400} height={400}>
+  const COLORS = ["#8884d8", "#82ca9d", "#FFBB28", "#FF8042", "#AF19FF"];
+  const CustomTooltip = ({ active, payload }) => {
+    if (active) {
+      return (
+        <div
+          className="custom-tooltip"
+          style={{
+            backgroundColor: "#000",
+            padding: "5px",
+            border: "1px solid #cccc",
+          }}
+        >
+          <label>{`${payload[0].name} : ${payload[0].value}%`}</label>
+        </div>
+      );
+    }
+    return null;
+  };
+  return (
+    <div className="w-11/12 md:w-10/12 mx-auto text-center">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold my-10">
+        Pie Chart of Topic Questions
+      </h2>
+      <div className="flex justify-center">
+        <PieChart width={790} height={380}>
           <Pie
-            data={data}
+            data={pieData}
+            color="#000000"
+            dataKey="value"
+            nameKey="name"
             cx="50%"
             cy="50%"
-            labelLine={false}
-            label={renderCustomizedLabel}
-            outerRadius={80}
+            outerRadius={160}
             fill="#8884d8"
-            dataKey="value"
           >
             {data.map((entry, index) => (
               <Cell
@@ -62,8 +63,12 @@ export default class Statistics extends PureComponent {
               />
             ))}
           </Pie>
+          <Tooltip content={<CustomTooltip />} />
+          <Legend />
         </PieChart>
-      </ResponsiveContainer>
-    );
-  }
-}
+      </div>
+    </div>
+  );
+};
+
+export default Statistics;
