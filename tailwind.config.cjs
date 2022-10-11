@@ -6,7 +6,7 @@ module.exports = {
       fontFamily: {
         baloo: "'Baloo 2', cursive",
         ubuntu: "'Ubuntu', sans-serif",
-        ubuntu: "'Ubuntu Mono', monospace",
+        ubuntuCode: "'Ubuntu Mono', monospace",
       },
     },
   },
