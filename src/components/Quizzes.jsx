@@ -13,7 +13,7 @@ const Quizzes = () => {
       <h2 className="text-2xl font-bold mb-6">{name} Quizzes</h2>
       <div className="grid md:grid-cols-4">
         <QuizResult marks={marks} />
-        <div className="md:col-span-3 ">
+        <div className="md:col-span-3">
           {questions.map((question, index) => (
             <QuizQuestion
               key={question.id}

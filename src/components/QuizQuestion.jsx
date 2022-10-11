@@ -15,7 +15,10 @@ const QuizQuestion = ({ singleQuestion, serialNumber, marks, setMarks }) => {
           onClick={() => setIsEyeOpen(!isEyeOpen)}
           className="cursor-pointer"
         >
-          <FontAwesomeIcon icon={faEye} />
+          <FontAwesomeIcon
+            className="hover:text-green-500 transition-all duration-300"
+            icon={faEye}
+          />
         </button>
       </h3>
       <ul className="grid md:grid-cols-2 gap-2">
