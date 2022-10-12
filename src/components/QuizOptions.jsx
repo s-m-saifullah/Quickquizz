@@ -33,7 +33,7 @@ const QuizOptions = ({
           <input
             type="radio"
             name={serialNumber}
-            className="radio checked:bg-blue-500"
+            className="radio checked:bg-primary"
             ref={detailsRef}
           />
           <span className="group-hover:text-primary label-text md:text-base">

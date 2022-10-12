@@ -10,7 +10,7 @@ const QuizQuestion = ({ singleQuestion, serialNumber, marks, setMarks }) => {
     <div className="md:w-3/4 mx-auto mb-10 p-3 border-2 rounded-lg">
       <h3 className="font-ubuntuCode text-left text-xl md:text-2xl pr-9 md:pr-12 mb-3 relative">
         <span>Quiz {serialNumber + 1}: </span>
-        {question}{" "}
+        {question.slice(3, -4)}{" "}
         <button
           onClick={() => setIsEyeOpen(!isEyeOpen)}
           className="cursor-pointer"
